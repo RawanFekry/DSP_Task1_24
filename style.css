@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'cairo';
+}
+.right {
+    position: absolute;
+    right: 0px;
+    width: 300px;
+    border: 3px solid #73AD21;
+    padding: 10px;
+  }
+
+/*h1#signal-studio{*/
+/*    color: #395599;*/
+/*}*/
+h3#add-signal{
+    border-radius: 12px;
+    background-color: #395599;
+    color: aliceblue;
+    margin-top: 2rem !important;
+    margin-right: 10%;
+    padding: 1rem;
+}
+div.row-widget.stButton{
+    margin-left: 35%;
+}
+
+/*button.css-6kekos.edgvbvh9{*/
+/*    margin-left: 4%;*/
+/*}*/
+/*button.css-6kekos.edgvbvh5{*/
+/*    color: aliceblue;*/
+/*    background-color: black;*/
+/*    margin-left: 35%;*/
+/*}*/
+
+button.css-6kekos.edgvbvh9{
+    margin-left: 4% !important;
+    color: black;
+    background-color: #eeeeee;
+    padding: 4px;
+    /*margin-left: 35%;*/
+}
+
+div.block-container.css-18e3th9 {
+    flex: 1 1 0%;
+    width: 100%;
+    padding: 2rem 2rem 2rem;
+    min-width: auto;
+    max-width: initial;
+}
+div.row-widget.stCheckbox {
+    padding-top: 5%;
+    margin-left: 10%;
+}
+div.css-1p05t8e.epcbefy1{
+    margin-left: 10%;
+}
+div.css-12ttj6m.epcbefy1{
+    margin-right: 10%;
+}
+
+div.row-widget.stSelectbox{
+    margin-left: 10%;
+    padding-right: 20%;
+}
+
+div.stSlider{
+    margin-left: 18%;
+    width: 60% !important;
+}
+/*label.css-81oif8.effi0qh3 {*/
+/*    margin-bottom: 1.5rem !important;*/
+/*}*/
+
+/*label.css-81oif8.effi0qh3{*/
+/*    font-size: larger;*/
+/*    font-weight: bolder;*/
+/*}*/
+
+div.css-8u98yl.exg6vvm0 {
+    padding-top: 7%;
+    padding-right: 12%;
+    height: 10%;
+}
+
+section.css-po3vlj.exg6vvm15 {
+    height: 5rem;
+}
+
+span.css-9ycgxx.exg6vvm12 {
+    width: 5rem;
+}
+
+span.css-nwtri.exg6vvm13 {
+    margin-left: -13%;
+}
+div.css-1fttcpj.exg6vvm11 {
+    height: 5rem;
+    margin-top: 10%;
+}
+
+span.css-9ycgxx.exg6vvm12{
+    width: auto;
+}
+h3#upload-signal{
+    border-radius: 12px;
+    margin-bottom: -10rem;
+    margin-right: 10%;
+    background-color: #395599;
+    color: aliceblue;
+    padding: 1rem;
+}
+h3#options{
+    border-radius: 12px;
+    background-color: #395599;
+    color: aliceblue;
+    margin-right: 10%;
+    margin-top: 36%;
+    padding: 1rem;
+}
+div.css-u8hs99{
+    padding-left: 5% !important;
+}
+div.css-4648q8.e1tzin5v0 {
+    padding-top: 5rem;
+}
+div.row-widget.stRadio{
+    margin-top: 2rem !important;
+    margin-left: 3rem !important;
+    margin-bottom: -2rem !important;
+}
