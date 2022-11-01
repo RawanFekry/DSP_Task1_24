@@ -1,21 +1,22 @@
-<center>  <h1> Signal studio</h1>
+<center>  <h1> Signal Studio</h1 >
 </center>
 
-## Table of contents
+# Table of contents
 * [Information](#Information)
 * [Features](#Features)
+* [Task Info](#TasK Info)
 * [Screenshots](#Screenshots)
-* [Task Info](#Tasl Info)
+
 
 <hr>
 
-## Information
+# Information
 - Our website is made by streamlit -python-. <br>
 - All graphs are implemeted using plotly. <br>
 
 <hr>
 
-## Features
+# Features
 > General Information
 - Our website will give you multiple features to analyze your signals:
   > As our website is designed for :
@@ -31,13 +32,30 @@
   - Our website provide saving each graph of your signal as png and zooming in or out, also you can doenload your reconstructed  signal in csv formate as well.
 <hr>
 
-## Screeshots
+# Task Info
+> **Course**: Digital Signal Processing
+
+>**3rd Year, 1st Semester**
+
+> **Date**: 1/11/2022
+
+>**Team**:
+  - Misara Ahmed, Sec.2, B.N. 43
+  - Rawan mohamed, Sec.1  B.N. 34
+  - Rawan Abdelrahman, Sec.1, B.N. 32
+  - Rahma Abdelkader, Sec.1  B.N. 31
+  
+
+<hr>
+
+
+# Screeshots
 -These following screenshots will show our features .<br>
 ## Our website with default signal before any action
 ![Screan](https://user-images.githubusercontent.com/93431157/199153214-560d3088-0158-4a74-a9e9-2647c81086e2.png)
 ## Adding 2 signal with different frequency
 ![Adding_signals](https://user-images.githubusercontent.com/93431157/199153732-37d80034-e940-45cb-b520-fe54a3e1ad09.png)
-<There are many scenarios when sampling: 
+-There are many scenarios when sampling: 
 ## Sampling with frequency scale with sampling frequency < 2 fmax (Fmax=6.5 Hz as shown )
 ![under_sampling](https://user-images.githubusercontent.com/93431157/199154684-4441b896-68fb-403a-8d1e-34fa6dce4731.png)
 ## Sampling with frequency scale with sampling frequency = 2 fmax (Fmax=6.5 Hz as shown )
@@ -53,19 +71,5 @@
 ## Uploading & downloading 
 ![Download](https://user-images.githubusercontent.com/93431157/199158492-7f2ebf17-1a5f-4c0e-8762-c4dca444f635.png)
 ![Uploading](https://user-images.githubusercontent.com/93431157/199158548-67dbc12b-0b98-4a79-a337-4b2f11a33ba8.png)
-
-<hr>
-
-
-
-<hr>
-
-## Team
-- Misara Ahmed , Sec.1 , B.N. 43
-- Rawan mohamed , Sec.1 , B.N. 34
-- Rawan Abdelrahman , Sec.1 , B.N. 32
-- Rahma Abdelkader , Sec.1 , B.N. 31
-
--DSP course (1/11/2022)
 
 <hr>
