@@ -5,7 +5,7 @@
 * [Information](#Information)
 * [Features](#Features)
 * [Screenshots](#Screenshots)
-* [Team](#team)
+* [Task Info](#Tasl Info)
 
 <hr>
 
@@ -32,17 +32,39 @@
 <hr>
 
 ## Screeshots
--You can find all screenshots of our website in (screenshots file).<br>
+-These following screenshots will show our features .<br>
+## Our website with default signal before any action
+![Screan](https://user-images.githubusercontent.com/93431157/199153214-560d3088-0158-4a74-a9e9-2647c81086e2.png)
+## Adding 2 signal with different frequency
+![Adding_signals](https://user-images.githubusercontent.com/93431157/199153732-37d80034-e940-45cb-b520-fe54a3e1ad09.png)
+<There are many scenarios when sampling: 
+## Sampling with frequency scale with sampling frequency < 2 fmax (Fmax=6.5 Hz as shown )
+![under_sampling](https://user-images.githubusercontent.com/93431157/199154684-4441b896-68fb-403a-8d1e-34fa6dce4731.png)
+## Sampling with frequency scale with sampling frequency = 2 fmax (Fmax=6.5 Hz as shown )
+![nequist](https://user-images.githubusercontent.com/93431157/199156003-d029bbdf-b5ef-4514-aeb9-276f64970311.png)
+## Samplind with frequency scale with sampling frequency > 2 fmax (Fmax=6.5 Hz as shown )
+![oversampling](https://user-images.githubusercontent.com/93431157/199156365-7835ac73-f9eb-424b-b89b-40611b562735.png)
+## Sampling 2 signals (4hz&8hz) with sampling frequency=6hz
+![case png](https://user-images.githubusercontent.com/93431157/199159514-7154bd41-f222-4be2-a6fb-1289f89fb6f1.jpeg)
+## sampling with 2fmax with noise 
+![noise](https://user-images.githubusercontent.com/93431157/199157783-2f9bedae-b787-4de1-8389-1e7495af4352.png)
+## sampling with Fmax scale 
+![Fmax](https://user-images.githubusercontent.com/93431157/199158193-60469411-d9c4-4cd3-9ab8-f240703ccca4.png)
+## Uploading & downloading 
+![Download](https://user-images.githubusercontent.com/93431157/199158492-7f2ebf17-1a5f-4c0e-8762-c4dca444f635.png)
+![Uploading](https://user-images.githubusercontent.com/93431157/199158548-67dbc12b-0b98-4a79-a337-4b2f11a33ba8.png)
 
 <hr>
 
 
 
 <hr>
-
+## DSP course
+##1-11-2022
 ## Team
 - Misara Ahmed , Sec.1 , B.N. 43
 - Rawan mohamed , Sec.1 , B.N. 34
 - Rawan Abdelrahman , Sec.1 , B.N. 32
 - Rahma Abdelkader , Sec.1 , B.N. 31
+
 <hr>
