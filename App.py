@@ -30,7 +30,7 @@ with open("style.css") as css:
 
 # ------------------------------------Initialization-----------------------------------------#
 
-Time = np.linspace(0, 3, 6000)
+Time = np.linspace(0, 3, 500)
 maxF = 1
 
 # ------------------------------------Session states------------------------------------------#
@@ -237,7 +237,7 @@ def mainPage():
     with content_left:
         st.title("Signal Studio 📉")
         st.subheader("Upload signal")
-        uploaded_file = st.file_uploader('upload', label_visibility="hidden")
+        uploaded_file = st.file_uploader('upload', label_visibility="hidden",type=['csv'])
         if uploaded_file is not None:
             df = pd.read_csv(uploaded_file)
             signal_uploaded = df["Y_axis"].values
@@ -284,8 +284,8 @@ def mainPage():
     with content_middle:
         st.subheader("Options")
         target_snr_db = st.slider('SNR', 50.0, 0.0)
-        sample = st.radio("Samplig", ["Normalized Frequency(Hz)", "FMax"])
-        if sample == "Normalized Frequency(Hz)":
+        sample = st.radio("Samplig", [" Frequency(Hz)", "FMax"])
+        if sample == " Frequency(Hz)":
             sampling_frequency = st.slider('', 1, 100, key='key1')
 
         if sample == "FMax":
