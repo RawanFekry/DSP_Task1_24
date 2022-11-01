@@ -30,7 +30,7 @@ with open("style.css") as css:
 
 # ------------------------------------Initialization-----------------------------------------#
 
-Time = np.linspace(0, 3, 500)
+Time = np.linspace(0, 3, 6000)
 maxF = 1
 
 # ------------------------------------Session states------------------------------------------#
@@ -43,7 +43,7 @@ if 'interactive' not in st.session_state or 'fig' not in st.session_state or 'Si
     st.session_state.fig = go.Figure()
     st.session_state.Summation = []
     st.session_state.maxF = 0
-    st.session_state.max_added=0
+    st.session_state.max_added = 0
     st.session_state.freq = []
     st.session_state.amp = []
 
@@ -52,18 +52,19 @@ for i in st.session_state.Signal.keys():
     st.session_state.amp.append(st.session_state.Signal[i][1])
 
 
-#uploded
+# uploded
 def Max_Freq_uploaded():
     if len(st.session_state.freq) == 0:
         st.session_state.maxF = 1
     else:
         st.session_state.maxF = max(st.session_state.freq)
-        if (st.session_state.maxF>st.session_state.max_added):
-            st.session_state.maxF=st.session_state.maxF
+        if (st.session_state.maxF > st.session_state.max_added):
+            st.session_state.maxF = st.session_state.maxF
         else:
-            st.session_state.maxF=st.session_state.max_added
-            
+            st.session_state.maxF = st.session_state.max_added
+
     return st.session_state.maxF
+
 
 # **********************************************************************************
 # Function Name: sampling
@@ -76,7 +77,7 @@ def Max_Freq_uploaded():
 def sampling(fsample, t, sin):
     time_range = (max(t) - min(t))
     samp_rate = int(((len(t) / time_range)) / (fsample))
-    #samp_rate = int((len(t) / time_range) / (fsample))
+    # samp_rate = int((len(t) / time_range) / (fsample))
     if samp_rate == 0:
         samp_rate = 1
     samp_time = t[:: samp_rate]
@@ -93,7 +94,6 @@ def sampling(fsample, t, sin):
 # ***********************************************************************************
 
 def sincInterpolation(fsample, t, sin):
-
     samp_time, samp_amp = sampling(fsample, t, sin)
     samp_time = np.array(samp_time)
     samp_amp = np.array(samp_amp)
@@ -102,6 +102,7 @@ def sincInterpolation(fsample, t, sin):
     resulted_matrix = samp_amp * np.sinc(k)
     reconstucted_sig = np.sum(resulted_matrix, axis=1)
     return reconstucted_sig, samp_time, samp_amp
+
 
 # **********************************************************************************
 # Function Name: download
@@ -116,6 +117,7 @@ def download(time, signal, maxf):
     Download_csv = pd.DataFrame(data)
     Download_csv.to_csv('Downloaded_csv.csv', index=False)
 
+
 # **********************************************************************************
 # Function Name: generateSignal
 # Parameters (in): None
@@ -128,6 +130,7 @@ def generateSignal():
     y = st.session_state.amplitude * np.cos(st.session_state.frequency * 2 * np.pi * Time)
     st.session_state.Signal.update({'Signal: ' + str(st.session_state.frequency) + ' hz, ' + str(
         st.session_state.amplitude) + ' mV': [st.session_state.frequency, st.session_state.amplitude, y]})
+
 
 # **********************************************************************************
 # Function Name: interactivePlot
@@ -160,6 +163,7 @@ def interactivePlot():
             go.Scatter(visible=True, x=Time, y=st.session_state.Summation, name="Original Signal")
         )
 
+
 # **********************************************************************************
 # Function Name: updatePlot
 # Parameters (in): None
@@ -181,6 +185,7 @@ def updatePlot():
             go.Scatter(visible=True, x=Time, y=signal_Summation)
         )
 
+
 # **********************************************************************************
 # Function Name: Plot
 # Parameters (in): None
@@ -195,7 +200,7 @@ def plot():
         width=400,
         height=830)
     st.session_state.fig.update_yaxes(title_text="Amplitude(mV)")
-    st.session_state.fig.update_xaxes(title_text="Time(s)",)
+    st.session_state.fig.update_xaxes(title_text="Time(s)", )
     st.plotly_chart(st.session_state.fig, use_container_width=True)
 
 
@@ -237,7 +242,7 @@ def mainPage():
     with content_left:
         st.title("Signal Studio 📉")
         st.subheader("Upload signal")
-        uploaded_file = st.file_uploader('upload', label_visibility="hidden",type=['csv'])
+        uploaded_file = st.file_uploader('upload', label_visibility="hidden")
         if uploaded_file is not None:
             df = pd.read_csv(uploaded_file)
             signal_uploaded = df["Y_axis"].values
@@ -284,21 +289,20 @@ def mainPage():
     with content_middle:
         st.subheader("Options")
         target_snr_db = st.slider('SNR', 50.0, 0.0)
-        sample = st.radio("Samplig", [" Frequency(Hz)", "FMax"])
-        if sample == " Frequency(Hz)":
+        sample = st.radio("Samplig", ["Normalized Frequency(Hz)", "FMax"])
+        if sample == "Normalized Frequency(Hz)":
             sampling_frequency = st.slider('', 1, 100, key='key1')
 
         if sample == "FMax":
             Max_Freq_uploaded()
-            if (st.session_state.max_added>st.session_state.maxF) :
+            if (st.session_state.max_added > st.session_state.maxF):
                 st.session_state.maxF = st.session_state.max_added
             else:
-              st.session_state.maxF= st.session_state.maxF
+                st.session_state.maxF = st.session_state.maxF
 
             sampling_frequency_max = st.slider('', 1, 10, step=1)
 
-            sampling_frequency=sampling_frequency_max*st.session_state.maxF
-
+            sampling_frequency = sampling_frequency_max * st.session_state.maxF
 
         add_noise = st.checkbox("Show Noise")
         sample = st.checkbox("Show Sampling")

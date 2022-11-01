@@ -11,9 +11,6 @@ html, body, [class*="css"] {
     padding: 10px;
   }
 
-/*h1#signal-studio{*/
-/*    color: #395599;*/
-/*}*/
 h3#add-signal{
     border-radius: 12px;
     background-color: #395599;
@@ -26,21 +23,11 @@ div.row-widget.stButton{
     margin-left: 35%;
 }
 
-/*button.css-6kekos.edgvbvh9{*/
-/*    margin-left: 4%;*/
-/*}*/
-/*button.css-6kekos.edgvbvh5{*/
-/*    color: aliceblue;*/
-/*    background-color: black;*/
-/*    margin-left: 35%;*/
-/*}*/
-
 button.css-6kekos.edgvbvh9{
     margin-left: 4% !important;
     color: black;
     background-color: #eeeeee;
     padding: 4px;
-    /*margin-left: 35%;*/
 }
 
 div.block-container.css-18e3th9 {
@@ -70,14 +57,6 @@ div.stSlider{
     margin-left: 18%;
     width: 60% !important;
 }
-/*label.css-81oif8.effi0qh3 {*/
-/*    margin-bottom: 1.5rem !important;*/
-/*}*/
-
-/*label.css-81oif8.effi0qh3{*/
-/*    font-size: larger;*/
-/*    font-weight: bolder;*/
-/*}*/
 
 div.css-8u98yl.exg6vvm0 {
     padding-top: 7%;
