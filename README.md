@@ -4,7 +4,7 @@
 # Table of contents
 * [Information](#Information)
 * [Features](#Features)
-* [Task Info](#TasK Info)
+* [Task Info](#TaskInfo)
 * [Screenshots](#Screenshots)
 
 
